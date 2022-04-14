@@ -26,7 +26,7 @@ const AnimeForm=(props)=>{
             <input id="animeGenre" type="text" name="genre" placeholder="Genre" />
             <input id="animeRating" type="number" min="0" name="rating" />
             <input id="_csrf" type="hidden" name="_csrf" value={props.csrf} />
-            <input className="makeAnimeSubmit" type="submit" value="Add this anime to your list" />
+            <input className="makeAnimeSubmit" type="submit" value="Add to your list" />
         </form>
     );
 }
