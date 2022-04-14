@@ -14,7 +14,7 @@ const handleAnime=(e)=>{
         helper.handleError('All fields are required.');
         return false;
     }
-    helper.sendPost(e.target.action, {name,age,color,_csrf}, loadAnimesFromServer);
+    helper.sendPost(e.target.action, {name,genre,rating,_csrf}, loadAnimesFromServer);
     return false;
 }
 const AnimeForm=(props)=>{
