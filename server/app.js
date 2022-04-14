@@ -42,7 +42,7 @@ app.use(session({
   store: new RedisStore({
     client: redisClient,
   }),
-  secret: 'Domo Arigato',
+  secret: "People die when they're killed",
   resave: true,
   saveUninitialized: true,
   cookie: {

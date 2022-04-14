@@ -1,22 +1,22 @@
 const mongoose = require('mongoose');
 const _ = require('underscore');
 
-let DomoModel = {};
+let AnimeModel = {};
 const setName = (name) => _.escape(name).trim();
-const DomoSchema = new mongoose.Schema({
+const AnimeSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
     trim: true,
     set: setName,
   },
-  age: {
-    type: Number,
-    min: 0,
+  genre: {
+    type: String,
+    trim: true,
     required: true,
   },
-  color: {
-    type: String,
+  rating: {
+    type: Number,
     min: 0,
     required: true,
   },
@@ -30,16 +30,16 @@ const DomoSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-DomoSchema.statics.toAPI = (doc) => ({
+AnimeSchema.statics.toAPI = (doc) => ({
   name: doc.name,
-  age: doc.age,
-  color: doc.color,
+  genre: doc.genre,
+  rating: doc.rating,
 });
-DomoSchema.statics.findByOwner = (ownerId, callback) => {
+AnimeSchema.statics.findByOwner = (ownerId, callback) => {
   const search = {
     owner: mongoose.Types.ObjectId(ownerId),
   };
-  return DomoModel.find(search).select('name age color').lean().exec(callback);
+  return AnimeModel.find(search).select('name genre rating').lean().exec(callback);
 };
-DomoModel = mongoose.model('Domo', DomoSchema);
-module.exports = DomoModel;
+AnimeModel = mongoose.model('Anime', AnimeSchema);
+module.exports = AnimeModel;

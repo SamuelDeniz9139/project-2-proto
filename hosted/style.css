@@ -47,7 +47,7 @@ nav:nth-child(1) {
     background-color: #66bdff;
 }
 
-.domoForm {
+.animeForm {
     border: 2px solid #338acc;
     height: 35px;
     width: 1000px;
@@ -58,7 +58,7 @@ nav:nth-child(1) {
     border-top-right-radius: 4px;
 }
 
-.domoForm label {
+.animeForm label {
     display: inline-block;
     width: 75px;
     margin-left: 10px;
@@ -66,11 +66,11 @@ nav:nth-child(1) {
     color: white;
 }
 
-.domoForm input[type=text] {
+.animeForm input[type=text] {
     float:left;
 }
 
-.makeDomoSubmit {
+.makeAnimeSubmit {
     transition: background-color 0.4s ease;
     display: inline;
     width: 90px;
@@ -80,11 +80,11 @@ nav:nth-child(1) {
     text-decoration: none;
 }
 
-.makeDomoSubmit:link, .makeDomoSubmit:visited, .makeDomoSubmit:hover, .makeDomoSubmit:active {
+.makeAnimeSubmit:link, .makeAnimeSubmit:visited, .makeAnimeSubmit:hover, .makeAnimeSubmit:active {
     color: white;
 }
 
-.makeDomoSubmit:hover {
+.makeAnimeSubmit:hover {
     transition: background-color 0.4s ease;
     background-color: #338acc;
 }
@@ -150,7 +150,7 @@ nav:nth-child(1) {
     display: none;
 }
 
-#domoMessage {
+#animeMessage {
     top: 250px;
     width: 250px;
     height: 650px;
@@ -160,7 +160,7 @@ nav:nth-child(1) {
     overflow: hidden;
 }
 
-#domoMessage h3 {
+#animeMessage h3 {
     width: 200px;
     position: absolute;
     top: 0px;
@@ -180,7 +180,7 @@ nav:nth-child(1) {
     font-style: italic;
 }
 
-#domo {
+#anime {
     z-index: 225;
     margin-left: 135px;
     height: 450px;
@@ -190,7 +190,7 @@ nav:nth-child(1) {
     transform: rotate(330deg);
 }
 
-#domos {
+#animes {
     width: 40%;
     min-width: 400px;
     border: 2px solid #55acee;
@@ -199,7 +199,7 @@ nav:nth-child(1) {
     margin-top: 100px;
 }
 
-.domo {
+.anime {
     width: 95%;
     margin: 0 auto;
     margin-top: 2px;
@@ -212,14 +212,14 @@ nav:nth-child(1) {
     overflow: hidden;
 }
 
-.domo:hover {
+.anime:hover {
     transition: border-color 0.2s ease-out;
     border-color: rgba(255,255,255, 0.8);
     transition: background-color 2.6s ease-out;
     background-color: #66bfff;
 }
 
-img.domoFace {
+img.animeFace {
     margin-left: 25px;
     margin-right: 10px;
     height: 50px;
@@ -229,7 +229,7 @@ img.domoFace {
     float:left;
 }
 
-h3.emptyDomo {
+h3.emptyAnime {
     width: 400px;
     font-size: 1.5em;
     margin: 0 auto;
@@ -237,7 +237,7 @@ h3.emptyDomo {
     margin-top: 18px;
 }
 
-h3.domoInfo {
+h3.animeInfo {
     float:left;
     width: 300px;
     font-weight: bold;
@@ -245,10 +245,10 @@ h3.domoInfo {
     font-size: 1.5em;
 }
 
-.domo:first-child {
+.anime:first-child {
     margin-top: 10px;
 }
 
-.domo:last-child {
+.anime:last-child {
     margin-bottom:10px;
 }
