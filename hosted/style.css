@@ -41,21 +41,12 @@ nav:nth-child(1) {
     background-color: #e72;
 }
 .animeForm {
-    border: 2px solid #e72;
-    height: 35px;
-    width: 1000px;
-    margin-top:0px;
-    padding-top:10px;
+    border: 1px solid #e72;
+    height: 150px;
+    width: 300px;
+    margin-top:10px;
+    padding:5px;
     background-color: #ea2;
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-}
-.animeForm label {
-    display: inline-block;
-    width: 75px;
-    margin-left: 10px;
-    font-size: 1.2em;
-    color: white;
 }
 .animeForm input[type=text] {
     float:left;
@@ -63,11 +54,10 @@ nav:nth-child(1) {
 .makeAnimeSubmit {
     transition: background-color 0.4s ease;
     display: inline;
-    width: 90px;
+    width: 70px;
     background-color: #ea2;
-    border-radius: 2px;
-    color: white;
-    text-decoration: none;
+    border-radius: 1px;
+    color: black;
 }
 .makeAnimeSubmit:link, .makeAnimeSubmit:visited, .makeAnimeSubmit:hover, .makeAnimeSubmit:active {
     color: white;
@@ -177,6 +167,9 @@ nav:nth-child(1) {
     padding: 10px;
     min-height:60px;
     overflow: hidden;
+}
+.animeField {
+    width:90px;
 }
 .anime:hover {
     transition: border-color 0.2s ease-out;
