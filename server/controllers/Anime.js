@@ -11,12 +11,8 @@ const getAnimes = (req, res) => AnimeModel.findByOwner(req.session.account._id, 
   return res.json({ animes: docs });
 });
 const makeAnime = async (req, res) => {
-  if (!req.body.name && !req.body.genre && !req.body.year) {
-    req.body.name = 'Cory in the House';
-    req.body.genre = 'Isekai';
-    req.body.year = '2010';
-  } else if (!req.body.name || !req.body.genre || !req.body.year) {
-    return res.status(400).json({ error: 'All fields required.' });
+  if (!req.body.name || !req.body.genre || !req.body.year) {
+    return res.status(400).json({ error: 'All fields are required.' });
   }
   const animeData = {
     name: req.body.name,

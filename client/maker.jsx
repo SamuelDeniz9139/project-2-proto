@@ -6,11 +6,7 @@ const handleAnime=(e)=>{
     let genre=e.target.querySelector('#animeGenre').value;
     let year=e.target.querySelector('#animeYear').value;
     const _csrf=e.target.querySelector('#_csrf').value;
-    if(!name&&!genre&&!year){
-        name="Cory In The House";
-        genre="Isekai";
-        year="2010";
-    } else if(!name||!genre||!year){
+    if(!name||!genre||!year){
         helper.handleError('All fields are required.');
         return false;
     }
