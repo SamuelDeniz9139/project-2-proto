@@ -1,6 +1,6 @@
 const handleError = (message) => {
   document.getElementById('errorMessage').textContent = message;
-  document.getElementById('domoMessage').classList.remove('hidden');
+  document.getElementById('animeMessage').classList.remove('hidden');
 };
 const sendPost = async (url, data, handler) => {
   const response = await fetch(url, {
@@ -11,7 +11,7 @@ const sendPost = async (url, data, handler) => {
     body: JSON.stringify(data),
   });
   const result = await response.json();
-  document.getElementById('domoMessage').classList.add('hidden');
+  document.getElementById('animeMessage').classList.add('hidden');
   if(result.error) {
     handleError(result.error);
   }
@@ -23,7 +23,7 @@ const sendPost = async (url, data, handler) => {
   }
 };
 const hideError=()=>{
-  document.getElementById('domoMessage').classList.add('hidden');
+  document.getElementById('animeMessage').classList.add('hidden');
 };
 module.exports={
   handleError,
