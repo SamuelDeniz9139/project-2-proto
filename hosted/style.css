@@ -42,7 +42,7 @@ nav:nth-child(1) {
 }
 .animeForm {
     border: 1px solid #e72;
-    height: 80px;
+    height: 150px;
     width: 200px;
     margin: 10px;
     padding: 10px;
@@ -169,7 +169,7 @@ nav:nth-child(1) {
     overflow: hidden;
 }
 .animeField {
-    width:90px;
+    width:200px;
 }
 h3.emptyAnime {
     width: 400px;
@@ -180,7 +180,6 @@ h3.emptyAnime {
 }
 h3.animeInfo {
     width: 600px;
-    font-weight: bold;
     top: 50%;
     left: 50%;
     font-size: 1.2em;
