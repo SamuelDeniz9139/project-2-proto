@@ -8,7 +8,7 @@ const getAnimes = (req, res) => AnimeModel.findByOwner(req.session.account._id, 
     console.log(err);
     return res.status(400).json({ error: 'An error occurred.' });
   }
-  return res.json({ Animes: docs });
+  return res.json({ animes: docs });
 });
 const makeAnime = async (req, res) => {
   if (!req.body.name && !req.body.genre && !req.body.rating) {
