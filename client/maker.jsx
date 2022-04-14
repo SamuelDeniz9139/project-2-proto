@@ -4,17 +4,17 @@ const handleAnime=(e)=>{
     helper.hideError();
     let name=e.target.querySelector('#animeName').value;
     let genre=e.target.querySelector('#animeGenre').value;
-    let rating=e.target.querySelector('#animeRating').value;
+    let year=e.target.querySelector('#animeYear').value;
     const _csrf=e.target.querySelector('#_csrf').value;
-    if(!name&&!genre&&!rating){
+    if(!name&&!genre&&!year){
         name="Cory In The House";
         genre="Isekai";
-        rating="999";
-    } else if(!name||!genre||!rating){
+        year="2010";
+    } else if(!name||!genre||!year){
         helper.handleError('All fields are required.');
         return false;
     }
-    helper.sendPost(e.target.action, {name,genre,rating,_csrf}, loadAnimesFromServer);
+    helper.sendPost(e.target.action, {name,genre,year,_csrf}, loadAnimesFromServer);
     return false;
 }
 const AnimeForm=(props)=>{
@@ -24,7 +24,7 @@ const AnimeForm=(props)=>{
         method="POST" className="animeForm">
             <input className='animeField' id="animeName" type="text" name="name" placeholder="Anime Title" /><br></br><br></br>
             <input className='animeField' id="animeGenre" type="text" name="genre" placeholder="Genre" /><br></br><br></br>
-            <input className='animeField' id="animeRating" type="number" min="0" name="rating" placeholder="Rating" /><br></br><br></br>
+            <input className='animeField' id="animeYear" type="number" min="0" name="year" placeholder="Year released" /><br></br><br></br>
             <input id="_csrf" type="hidden" name="_csrf" value={props.csrf} />
             <input className="makeAnimeSubmit" type="submit" value="Add to list" />
         </form>
@@ -41,7 +41,7 @@ const AnimeList=(props)=>{
     const animeNodes=props.animes.map(anime => {
         return(
             <div key={anime._id} className="anime">
-                <h3 className="animeInfo"> Title: {anime.name}; Genre: {anime.genre}; Rating: {anime.rating} </h3>
+                <h3 className="animeInfo"> Title: {anime.name}; Genre: {anime.genre}; Year released: {anime.year} </h3>
             </div>
         );
     });

@@ -11,23 +11,23 @@ const getAnimes = (req, res) => AnimeModel.findByOwner(req.session.account._id, 
   return res.json({ animes: docs });
 });
 const makeAnime = async (req, res) => {
-  if (!req.body.name && !req.body.genre && !req.body.rating) {
+  if (!req.body.name && !req.body.genre && !req.body.year) {
     req.body.name = 'Cory in the House';
     req.body.genre = 'Isekai';
-    req.body.rating = '999';
-  } else if (!req.body.name || !req.body.genre || !req.body.rating) {
+    req.body.year = '2010';
+  } else if (!req.body.name || !req.body.genre || !req.body.year) {
     return res.status(400).json({ error: 'All fields required.' });
   }
   const animeData = {
     name: req.body.name,
     genre: req.body.genre,
-    rating: req.body.rating,
+    year: req.body.year,
     owner: req.session.account._id,
   };
   try {
     const newAnime = new Anime(animeData);
     await newAnime.save();
-    return res.status(201).json({ name: newAnime.name, genre: newAnime.genre, rating: newAnime.rating });
+    return res.status(201).json({ name: newAnime.name, genre: newAnime.genre, year: newAnime.year });
   } catch (err) {
     console.log(err);
     if (err.code === 11000) {

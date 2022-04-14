@@ -15,7 +15,7 @@ const AnimeSchema = new mongoose.Schema({
     trim: true,
     required: true,
   },
-  rating: {
+  year: {
     type: Number,
     min: 0,
     required: true,
@@ -33,13 +33,13 @@ const AnimeSchema = new mongoose.Schema({
 AnimeSchema.statics.toAPI = (doc) => ({
   name: doc.name,
   genre: doc.genre,
-  rating: doc.rating,
+  year: doc.year,
 });
 AnimeSchema.statics.findByOwner = (ownerId, callback) => {
   const search = {
     owner: mongoose.Types.ObjectId(ownerId),
   };
-  return AnimeModel.find(search).select('name genre rating').lean().exec(callback);
+  return AnimeModel.find(search).select('name genre year').lean().exec(callback);
 };
 AnimeModel = mongoose.model('Anime', AnimeSchema);
 module.exports = AnimeModel;
