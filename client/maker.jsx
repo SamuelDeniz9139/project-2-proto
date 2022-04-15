@@ -18,17 +18,19 @@ const AnimeForm=(props)=>{
         <form id="animeForm" onSubmit={handleAnime}
         name="animeForm" action="/maker"
         method="POST" className="animeForm">
-            <input className='animeField' id="animeName" type="text" name="name" placeholder="Anime Title" /><br></br><br></br>
-            <select id="animeGenre" name="genre">
+            <input id="animeName" type="text" name="name" placeholder="Anime Title" /><br></br><br></br>
+            <label for="animeGenre">Genre: </label>
+            <select className='animeField' id="animeGenre" name="genre">
                 <option value="Action">Action</option>
                 <option value="Comedy">Comedy</option>
                 <option value="Isekai">Isekai</option>
                 <option value="Mecha">Mecha</option>
                 <option value="Romance">Romance</option>
+                <option value="Sci-Fi">Sci-Fi</option>
                 <option value="Shonen">Shonen</option>
                 <option value="Slice of Life">Slice of Life</option>
-            </select>
-            <input className='animeField' id="animeYear" type="number" min="0" name="year" placeholder="Year released" /><br></br><br></br>
+            </select><br></br><br></br>
+            <input id="animeYear" type="number" min="0" name="year" placeholder="Year released" /><br></br><br></br>
             <input id="_csrf" type="hidden" name="_csrf" value={props.csrf} />
             <input className="makeAnimeSubmit" type="submit" value="Add to list" />
         </form>

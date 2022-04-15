@@ -147,9 +147,6 @@ nav:nth-child(1) {
     overflow: hidden;
     text-align: center;
 }
-.animeField {
-    width:200px;
-}
 h3.emptyAnime {
     width: 400px;
     font-size: 1.5em;
