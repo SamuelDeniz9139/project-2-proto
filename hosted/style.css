@@ -29,7 +29,7 @@ nav:nth-child(1) {
     background-color: #ea2;
 }
 .navlink a:hover {
-    background-color: #e72;
+    color: #e72;
 }
 .animeForm {
     border: 1px solid #e72;
